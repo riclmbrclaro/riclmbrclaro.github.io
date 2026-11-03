@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Riclmbr - Pixel Art Assets</title>
-<meta name="description" content="Pixel art asset packs for 2D games: characters, animals, enemies, UI and more.">
+<title>Riclmbr - Pixel Art Portfolio</title>
+<meta name="description" content="Portfolio of Riclmbr, a pixel artist creating characters, animation, environments and UI for 2D games.">
 <style>
   :root {
     --bg: #fff3dc;
@@ -15,7 +15,6 @@
     --accent: #e84c58;
     --accent-dark: #b23340;
     --gold: #ffb83c;
-    --green: #5aa84a;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -54,31 +53,18 @@
   .sub { margin: 0 0 24px; color: var(--ink-soft); }
 
   .featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center;
-    background: var(--card); border: 3px solid var(--ink); border-radius: 16px; padding: 20px; box-shadow: 0 6px 0 var(--ink); }
-  .featured img { border: 3px solid var(--ink); border-radius: 10px; width: 100%; }
-  .tag { display: inline-block; background: var(--green); color: #fff; font-weight: 800; font-size: .8rem;
-    padding: 3px 10px; border-radius: 99px; border: 2px solid var(--ink); margin-bottom: 8px; }
+    background: var(--card); border: 3px solid var(--ink); border-radius: 16px; padding: 20px; box-shadow: 0 6px 0 var(--ink); margin-bottom: 28px; }
+  .featured img { border: 3px solid var(--ink); border-radius: 10px; width: 100%; image-rendering: auto; }
+  .featured .pair { display: grid; gap: 12px; }
   .featured h3 { margin: 0 0 8px; font-size: 1.6rem; }
-  .featured ul { padding-left: 20px; margin: 10px 0 18px; }
-  .featured li { margin: 3px 0; }
+  .featured p { margin: 0; }
 
-  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
-  .stat { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; padding: 14px 8px; text-align: center; }
-  .stat b { display: block; font-size: 1.8rem; color: var(--accent-dark); }
-  .stat span { font-size: .85rem; color: var(--ink-soft); font-weight: 700; }
-
-  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
   .gallery figure { margin: 0; }
   .gallery img { border: 3px solid var(--ink); border-radius: 12px; box-shadow: 0 5px 0 var(--ink); width: 100%;
     aspect-ratio: 16 / 9; object-fit: cover; image-rendering: auto; }
-  .gallery figcaption { margin-top: 12px; font-weight: 700; font-size: .9rem; color: var(--ink-soft); text-align: center; }
-
-  .more { margin-top: 40px; }
-  .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .pack { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; overflow: hidden; box-shadow: 0 5px 0 var(--ink); }
-  .pack img { width: 100%; height: auto; border-bottom: 3px solid var(--ink); image-rendering: auto; }
-  .pack h4 { margin: 10px 12px 2px; font-size: 1rem; line-height: 1.3; }
-  .pack p { margin: 0 12px 12px; font-size: .85rem; color: var(--ink-soft); }
+  .gallery figcaption { margin-top: 12px; font-size: .9rem; color: var(--ink-soft); }
+  .gallery figcaption b { display: block; font-size: 1rem; color: var(--ink); }
 
   .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .why div { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; padding: 16px; }
@@ -90,9 +76,7 @@
 
   @media (max-width: 760px) {
     .featured { grid-template-columns: 1fr; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
     .gallery, .why { grid-template-columns: 1fr; }
-    .pack-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -103,8 +87,7 @@
     <nav>
       <a class="brand" href="#">Ricl<span>mbr</span></a>
       <ul>
-        <li><a href="#packs">Packs</a></li>
-        <li><a href="#preview">Preview</a></li>
+        <li><a href="#work">Work</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -116,161 +99,95 @@
   <div class="wrap">
 
     <div class="hero">
-      <h1>Pixel Art Assets<br>for 2D Games</h1>
-      <p>Cute, consistent and ready-to-use sprite packs: characters, animals, enemies and more. Built to drop straight into your project.</p>
+      <h1>Riclmbr<br>Pixel Artist</h1>
+      <p>I create pixel art for 2D games: characters, animation, environments, UI and effects.</p>
       <div class="btns">
-        <a class="btn primary" href="#packs">See the packs</a>
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn alt" href="#contact">Get in touch</a>
       </div>
     </div>
 
-    <section id="packs">
-      <h2>Featured pack</h2>
-      <p class="sub">My newest release.</p>
+    <section id="work">
+      <h2>Selected work</h2>
+      <p class="sub">Some of the asset packs I have already made.</p>
       <div class="featured">
-        <img src="chibi-heroes.png" alt="Pixel Chibi Heroes cover" width="390" height="260">
+        <div class="pair">
+          <img src="shot-combat.png" alt="Pixel Chibi Heroes combat animations">
+          <img src="shot-directions.png" alt="Pixel Chibi Heroes characters in four directions">
+        </div>
         <div>
-          <span class="tag">NEW</span>
           <h3>Pixel Chibi Heroes</h3>
-          <p>120 big-head pixel characters in 12 themes, each with 20 animations in 4 directions.</p>
-          <ul>
-            <li>48x48 frames, same layout on every sheet</li>
-            <li>Idle, Walk, Run, Slash, Cast, Dance and more</li>
-            <li>120 portraits for menus and character select</li>
-            <li>Unity prefabs, controllers and clips included</li>
-          </ul>
+          <p>120 big-head characters across 12 themes, drawn on a 48x48 grid. Each one is animated in 4 directions with 20 animations, from idle and walk to slash, cast and dance, and has its own portrait.</p>
         </div>
       </div>
-
-      <div class="stats">
-        <div class="stat"><b>120</b><span>CHARACTERS</span></div>
-        <div class="stat"><b>20</b><span>ANIMATIONS</span></div>
-        <div class="stat"><b>4</b><span>DIRECTIONS</span></div>
-        <div class="stat"><b>48x48</b><span>PIXEL FRAMES</span></div>
-      </div>
-
-      <div class="more">
-        <h2>More packs</h2>
-        <p class="sub">A selection from the rest of my catalog.</p>
-        <div class="pack-grid">
-          <article class="pack">
-            <img src="packs/cyberpunk.png" alt="Pixel Cyberpunk: Neon City cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Cyberpunk: Neon City</h4>
-            <p>300 top-down cyberpunk assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/gothic-castle.png" alt="Pixel Gothic Castle cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Gothic Castle</h4>
-            <p>651 metroidvania assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/fantasy-village.png" alt="Pixel Fantasy Village cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Fantasy Village</h4>
-            <p>600 16x16 RPG starter assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/pirates.png" alt="Pixel Pirates: Sea Adventure cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Pirates: Sea Adventure</h4>
-            <p>458 top-down pirate assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/cozy-christmas.png" alt="Cozy Pixel Christmas cover" width="630" height="500" loading="lazy">
-            <h4>Cozy Pixel Christmas</h4>
-            <p>1999 holiday sprites</p>
-          </article>
-          <article class="pack">
-            <img src="packs/cozy-kitchen.png" alt="Cozy Pixel Kitchen cover" width="630" height="500" loading="lazy">
-            <h4>Cozy Pixel Kitchen</h4>
-            <p>1774 kitchen sprites</p>
-          </article>
-          <article class="pack">
-            <img src="packs/modern-life.png" alt="Pixel Modern Life cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Modern Life</h4>
-            <p>671 16x16 top-down assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/space-shooter.png" alt="Pixel Space Shooter cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Space Shooter</h4>
-            <p>153 animated shmup assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/cozy-animals.png" alt="Cozy Pixel Animals cover" width="630" height="500" loading="lazy">
-            <h4>Cozy Pixel Animals</h4>
-            <p>200 animated animal sprites</p>
-          </article>
-          <article class="pack">
-            <img src="packs/dark-tournament.png" alt="Pixel Dark Tournament cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Dark Tournament</h4>
-            <p>379 fighting game assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/isometric.png" alt="Pixel Isometric cover" width="630" height="500" loading="lazy">
-            <h4>Pixel Isometric</h4>
-            <p>509 interior and city assets</p>
-          </article>
-          <article class="pack">
-            <img src="packs/modular-characters.png" alt="Modular Pixel Characters cover" width="630" height="500" loading="lazy">
-            <h4>Modular Pixel Characters</h4>
-            <p>430 character creator items</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="preview">
-      <h2>Preview</h2>
-      <p class="sub">A quick look at what is inside the packs.</p>
       <div class="gallery">
         <figure>
-          <img src="shot-combat.png" alt="Pixel Chibi Heroes: combat animations" loading="lazy">
-          <figcaption>Pixel Chibi Heroes: combat animations</figcaption>
+          <a href="scenes/gothic-castle.png" target="_blank" rel="noopener"><img src="scenes/gothic-castle.png" alt="Scene from Pixel Gothic Castle" loading="lazy"></a>
+          <figcaption><b>Pixel Gothic Castle</b>Metroidvania characters, bosses and tilesets</figcaption>
         </figure>
         <figure>
-          <img src="shot-directions.png" alt="Pixel Chibi Heroes: four directions" loading="lazy">
-          <figcaption>Pixel Chibi Heroes: four directions</figcaption>
+          <a href="scenes/cyberpunk.png" target="_blank" rel="noopener"><img src="scenes/cyberpunk.png" alt="Scene from Pixel Cyberpunk: Neon City" loading="lazy"></a>
+          <figcaption><b>Pixel Cyberpunk: Neon City</b>Neon street tiles, characters and props</figcaption>
         </figure>
         <figure>
-          <img src="scenes/gothic-castle.png" alt="Pixel Gothic Castle: grand hall" loading="lazy">
-          <figcaption>Pixel Gothic Castle: grand hall</figcaption>
+          <a href="scenes/fantasy-village.png" target="_blank" rel="noopener"><img src="scenes/fantasy-village.png" alt="Scene from Pixel Fantasy Village" loading="lazy"></a>
+          <figcaption><b>Pixel Fantasy Village</b>RPG village tiles, NPCs and houses</figcaption>
         </figure>
         <figure>
-          <img src="scenes/cyberpunk.png" alt="Pixel Cyberpunk: neon street" loading="lazy">
-          <figcaption>Pixel Cyberpunk: neon street</figcaption>
+          <a href="scenes/pirates.png" target="_blank" rel="noopener"><img src="scenes/pirates.png" alt="Scene from Pixel Pirates: Sea Adventure" loading="lazy"></a>
+          <figcaption><b>Pixel Pirates: Sea Adventure</b>Top-down port, crew and ships in 8 directions</figcaption>
         </figure>
         <figure>
-          <img src="scenes/modern-life.png" alt="Pixel Modern Life: city street at night" loading="lazy">
-          <figcaption>Pixel Modern Life: city street at night</figcaption>
+          <a href="scenes/modern-life.png" target="_blank" rel="noopener"><img src="scenes/modern-life.png" alt="Scene from Pixel Modern Life" loading="lazy"></a>
+          <figcaption><b>Pixel Modern Life</b>Top-down city, homes and characters</figcaption>
         </figure>
         <figure>
-          <img src="scenes/fantasy-village.png" alt="Pixel Fantasy Village: village map" loading="lazy">
-          <figcaption>Pixel Fantasy Village: village map</figcaption>
+          <a href="scenes/isometric.png" target="_blank" rel="noopener"><img src="scenes/isometric.png" alt="Scene from Pixel Isometric" loading="lazy"></a>
+          <figcaption><b>Pixel Isometric</b>Isometric city and interiors</figcaption>
         </figure>
         <figure>
-          <img src="scenes/isometric.png" alt="Pixel Isometric: city street" loading="lazy">
-          <figcaption>Pixel Isometric: city street</figcaption>
+          <a href="scenes/dark-tournament.png" target="_blank" rel="noopener"><img src="scenes/dark-tournament.png" alt="Scene from Pixel Dark Tournament" loading="lazy"></a>
+          <figcaption><b>Pixel Dark Tournament</b>Fighting game characters, arenas and HUD</figcaption>
         </figure>
         <figure>
-          <img src="scenes/dark-tournament.png" alt="Pixel Dark Tournament: fight screen" loading="lazy">
-          <figcaption>Pixel Dark Tournament: fight screen</figcaption>
+          <a href="scenes/ashen-realm.png" target="_blank" rel="noopener"><img src="scenes/ashen-realm.png" alt="Scene from Pixel Ashen Realm" loading="lazy"></a>
+          <figcaption><b>Pixel Ashen Realm</b>Dark fantasy characters, bosses and backgrounds</figcaption>
+        </figure>
+        <figure>
+          <a href="scenes/space-shooter.png" target="_blank" rel="noopener"><img src="scenes/space-shooter.png" alt="Scene from Pixel Space Shooter" loading="lazy"></a>
+          <figcaption><b>Pixel Space Shooter</b>Animated ships, enemies and effects</figcaption>
+        </figure>
+        <figure>
+          <a href="scenes/tower-defense.png" target="_blank" rel="noopener"><img src="scenes/tower-defense.png" alt="Scene from Pixel Tower Defense" loading="lazy"></a>
+          <figcaption><b>Pixel Tower Defense</b>Towers, enemies and tilesets</figcaption>
+        </figure>
+        <figure>
+          <a href="scenes/fantasy-ui.png" target="_blank" rel="noopener"><img src="scenes/fantasy-ui.png" alt="Scene from Fantasy Pixel UI" loading="lazy"></a>
+          <figcaption><b>Fantasy Pixel UI</b>RPG menus, inventory and HUD</figcaption>
+        </figure>
+        <figure>
+          <a href="scenes/cozy-kitchen.png" target="_blank" rel="noopener"><img src="scenes/cozy-kitchen.png" alt="Scene from Cozy Pixel Kitchen" loading="lazy"></a>
+          <figcaption><b>Cozy Pixel Kitchen</b>Kitchens, animated appliances and food</figcaption>
         </figure>
       </div>
     </section>
 
     <section id="about">
-      <h2>Why my packs</h2>
-      <p class="sub">Made to save you time.</p>
+      <h2>What I do</h2>
+      <p class="sub">The kind of art you will find in my work.</p>
       <div class="why">
-        <div><h4>Consistent style</h4><p>Every asset follows the same grid, outline and palette, so everything fits together.</p></div>
-        <div><h4>Ready to use</h4><p>Clean sheets, JSON data and engine-ready setups. No cleanup needed.</p></div>
-        <div><h4>Commercial friendly</h4><p>Use them in personal and commercial games. Check each pack page for its license.</p></div>
+        <div><h4>Characters and animation</h4><p>Heroes, enemies, animals and bosses, with animation sets in multiple directions.</p></div>
+        <div><h4>Worlds and tilesets</h4><p>Top-down, side-view and isometric scenes, from cozy kitchens to neon cities.</p></div>
+        <div><h4>UI and effects</h4><p>Menus, inventories and HUDs, plus the effects that bring a game to life.</p></div>
       </div>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p class="sub">Find more of my work on GitHub and X.</p>
+      <p class="sub">Follow my work or say hi.</p>
       <div class="links">
-        <a class="btn alt" href="https://github.com/riclmbrclaro" target="_blank" rel="noopener">GitHub</a>
         <a class="btn alt" href="https://x.com/Limaperazvd" target="_blank" rel="noopener">X (@Limaperazvd)</a>
+        <a class="btn alt" href="https://github.com/riclmbrclaro" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
 
