@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riclmbr - Pixel Art Assets</title>
+<meta name="description" content="Pixel art asset packs for 2D games: characters, animals, enemies, UI and more.">
+<style>
+  :root {
+    --bg: #fff3dc;
+    --bg2: #ffe3b0;
+    --ink: #4e281a;
+    --ink-soft: #7a4a36;
+    --card: #fffaf0;
+    --accent: #e84c58;
+    --accent-dark: #b23340;
+    --gold: #ffb83c;
+    --green: #5aa84a;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    background-attachment: fixed;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  img { image-rendering: pixelated; max-width: 100%; display: block; }
+
+  header { padding: 28px 0 8px; }
+  nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .brand { font-weight: 900; font-size: 1.25rem; letter-spacing: .5px; color: var(--ink); text-decoration: none; }
+  .brand span { color: var(--accent); }
+  nav ul { list-style: none; display: flex; gap: 18px; margin: 0; padding: 0; flex-wrap: wrap; }
+  nav a { color: var(--ink-soft); text-decoration: none; font-weight: 700; }
+  nav a:hover { color: var(--accent); }
+
+  .hero { text-align: center; padding: 48px 0 36px; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; margin: 0 0 14px; font-weight: 900;
+    color: var(--gold); text-shadow: 3px 3px 0 var(--ink), -1px -1px 0 var(--ink), 1px -1px 0 var(--ink), -1px 1px 0 var(--ink); }
+  .hero p { max-width: 620px; margin: 0 auto 24px; font-size: 1.1rem; color: var(--ink-soft); }
+  .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; font-weight: 800; text-decoration: none;
+    border: 3px solid var(--ink); box-shadow: 0 4px 0 var(--ink); transition: transform .1s, box-shadow .1s; }
+  .btn:hover { transform: translateY(2px); box-shadow: 0 2px 0 var(--ink); }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.alt { background: var(--card); color: var(--ink); }
+
+  section { padding: 36px 0; }
+  h2 { font-size: 1.7rem; margin: 0 0 6px; font-weight: 900; }
+  .sub { margin: 0 0 24px; color: var(--ink-soft); }
+
+  .featured { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center;
+    background: var(--card); border: 3px solid var(--ink); border-radius: 16px; padding: 20px; box-shadow: 0 6px 0 var(--ink); }
+  .featured img { border: 3px solid var(--ink); border-radius: 10px; width: 100%; }
+  .tag { display: inline-block; background: var(--green); color: #fff; font-weight: 800; font-size: .8rem;
+    padding: 3px 10px; border-radius: 99px; border: 2px solid var(--ink); margin-bottom: 8px; }
+  .featured h3 { margin: 0 0 8px; font-size: 1.6rem; }
+  .featured ul { padding-left: 20px; margin: 10px 0 18px; }
+  .featured li { margin: 3px 0; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 24px; }
+  .stat { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; padding: 14px 8px; text-align: center; }
+  .stat b { display: block; font-size: 1.8rem; color: var(--accent-dark); }
+  .stat span { font-size: .85rem; color: var(--ink-soft); font-weight: 700; }
+
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .gallery img { border: 3px solid var(--ink); border-radius: 12px; box-shadow: 0 5px 0 var(--ink); width: 100%; }
+
+  .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .why div { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; padding: 16px; }
+  .why h4 { margin: 0 0 6px; font-size: 1.1rem; }
+  .why p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 12px; }
+  footer { padding: 30px 0 40px; text-align: center; color: var(--ink-soft); font-size: .9rem; }
+
+  @media (max-width: 760px) {
+    .featured { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .gallery, .why { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#">Ricl<span>mbr</span></a>
+      <ul>
+        <li><a href="#packs">Packs</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <h1>Pixel Art Assets<br>for 2D Games</h1>
+      <p>Cute, consistent and ready-to-use sprite packs: characters, animals, enemies and more. Built to drop straight into your project.</p>
+      <div class="btns">
+        <a class="btn primary" href="#packs">See the packs</a>
+      </div>
+    </div>
+
+    <section id="packs">
+      <h2>Featured pack</h2>
+      <p class="sub">My newest release.</p>
+      <div class="featured">
+        <img src="chibi-heroes.png" alt="Pixel Chibi Heroes cover" width="390" height="260">
+        <div>
+          <span class="tag">NEW</span>
+          <h3>Pixel Chibi Heroes</h3>
+          <p>120 big-head pixel characters in 12 themes, each with 20 animations in 4 directions.</p>
+          <ul>
+            <li>48x48 frames, same layout on every sheet</li>
+            <li>Idle, Walk, Run, Slash, Cast, Dance and more</li>
+            <li>120 portraits for menus and character select</li>
+            <li>Unity prefabs, controllers and clips included</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>120</b><span>CHARACTERS</span></div>
+        <div class="stat"><b>20</b><span>ANIMATIONS</span></div>
+        <div class="stat"><b>4</b><span>DIRECTIONS</span></div>
+        <div class="stat"><b>48x48</b><span>PIXEL FRAMES</span></div>
+      </div>
+    </section>
+
+    <section id="preview">
+      <h2>Preview</h2>
+      <p class="sub">A quick look at what is inside.</p>
+      <div class="gallery">
+        <img src="shot-combat.png" alt="Combat animations" loading="lazy">
+        <img src="shot-directions.png" alt="Four directions" loading="lazy">
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>Why my packs</h2>
+      <p class="sub">Made to save you time.</p>
+      <div class="why">
+        <div><h4>Consistent style</h4><p>Every asset follows the same grid, outline and palette, so everything fits together.</p></div>
+        <div><h4>Ready to use</h4><p>Clean sheets, JSON data and engine-ready setups. No cleanup needed.</p></div>
+        <div><h4>Commercial friendly</h4><p>Use them in personal and commercial games. Check each pack page for its license.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Find more of my work on GitHub.</p>
+      <div class="links">
+        <a class="btn alt" href="https://github.com/riclmbrclaro-commits" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Riclmbr. All pixels made with love.</div>
+</footer>
+
+</body>
+</html>
