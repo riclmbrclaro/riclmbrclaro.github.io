@@ -68,7 +68,17 @@
   .stat span { font-size: .85rem; color: var(--ink-soft); font-weight: 700; }
 
   .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .gallery img { border: 3px solid var(--ink); border-radius: 12px; box-shadow: 0 5px 0 var(--ink); width: 100%; }
+  .gallery figure { margin: 0; }
+  .gallery img { border: 3px solid var(--ink); border-radius: 12px; box-shadow: 0 5px 0 var(--ink); width: 100%;
+    aspect-ratio: 16 / 9; object-fit: cover; image-rendering: auto; }
+  .gallery figcaption { margin-top: 12px; font-weight: 700; font-size: .9rem; color: var(--ink-soft); text-align: center; }
+
+  .more { margin-top: 40px; }
+  .pack-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pack { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; overflow: hidden; box-shadow: 0 5px 0 var(--ink); }
+  .pack img { width: 100%; height: auto; border-bottom: 3px solid var(--ink); image-rendering: auto; }
+  .pack h4 { margin: 10px 12px 2px; font-size: 1rem; line-height: 1.3; }
+  .pack p { margin: 0 12px 12px; font-size: .85rem; color: var(--ink-soft); }
 
   .why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .why div { background: var(--card); border: 3px solid var(--ink); border-radius: 12px; padding: 16px; }
@@ -82,6 +92,7 @@
     .featured { grid-template-columns: 1fr; }
     .stats { grid-template-columns: repeat(2, 1fr); }
     .gallery, .why { grid-template-columns: 1fr; }
+    .pack-grid { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -136,14 +147,111 @@
         <div class="stat"><b>4</b><span>DIRECTIONS</span></div>
         <div class="stat"><b>48x48</b><span>PIXEL FRAMES</span></div>
       </div>
+
+      <div class="more">
+        <h2>More packs</h2>
+        <p class="sub">A selection from the rest of my catalog.</p>
+        <div class="pack-grid">
+          <article class="pack">
+            <img src="packs/cyberpunk.png" alt="Pixel Cyberpunk: Neon City cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Cyberpunk: Neon City</h4>
+            <p>300 top-down cyberpunk assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/gothic-castle.png" alt="Pixel Gothic Castle cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Gothic Castle</h4>
+            <p>651 metroidvania assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/fantasy-village.png" alt="Pixel Fantasy Village cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Fantasy Village</h4>
+            <p>600 16x16 RPG starter assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/pirates.png" alt="Pixel Pirates: Sea Adventure cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Pirates: Sea Adventure</h4>
+            <p>458 top-down pirate assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/cozy-christmas.png" alt="Cozy Pixel Christmas cover" width="630" height="500" loading="lazy">
+            <h4>Cozy Pixel Christmas</h4>
+            <p>1999 holiday sprites</p>
+          </article>
+          <article class="pack">
+            <img src="packs/cozy-kitchen.png" alt="Cozy Pixel Kitchen cover" width="630" height="500" loading="lazy">
+            <h4>Cozy Pixel Kitchen</h4>
+            <p>1774 kitchen sprites</p>
+          </article>
+          <article class="pack">
+            <img src="packs/modern-life.png" alt="Pixel Modern Life cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Modern Life</h4>
+            <p>671 16x16 top-down assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/space-shooter.png" alt="Pixel Space Shooter cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Space Shooter</h4>
+            <p>153 animated shmup assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/cozy-animals.png" alt="Cozy Pixel Animals cover" width="630" height="500" loading="lazy">
+            <h4>Cozy Pixel Animals</h4>
+            <p>200 animated animal sprites</p>
+          </article>
+          <article class="pack">
+            <img src="packs/dark-tournament.png" alt="Pixel Dark Tournament cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Dark Tournament</h4>
+            <p>379 fighting game assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/isometric.png" alt="Pixel Isometric cover" width="630" height="500" loading="lazy">
+            <h4>Pixel Isometric</h4>
+            <p>509 interior and city assets</p>
+          </article>
+          <article class="pack">
+            <img src="packs/modular-characters.png" alt="Modular Pixel Characters cover" width="630" height="500" loading="lazy">
+            <h4>Modular Pixel Characters</h4>
+            <p>430 character creator items</p>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="preview">
       <h2>Preview</h2>
-      <p class="sub">A quick look at what is inside.</p>
+      <p class="sub">A quick look at what is inside the packs.</p>
       <div class="gallery">
-        <img src="shot-combat.png" alt="Combat animations" loading="lazy">
-        <img src="shot-directions.png" alt="Four directions" loading="lazy">
+        <figure>
+          <img src="shot-combat.png" alt="Pixel Chibi Heroes: combat animations" loading="lazy">
+          <figcaption>Pixel Chibi Heroes: combat animations</figcaption>
+        </figure>
+        <figure>
+          <img src="shot-directions.png" alt="Pixel Chibi Heroes: four directions" loading="lazy">
+          <figcaption>Pixel Chibi Heroes: four directions</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/gothic-castle.png" alt="Pixel Gothic Castle: grand hall" loading="lazy">
+          <figcaption>Pixel Gothic Castle: grand hall</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/cyberpunk.png" alt="Pixel Cyberpunk: neon street" loading="lazy">
+          <figcaption>Pixel Cyberpunk: neon street</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/modern-life.png" alt="Pixel Modern Life: city street at night" loading="lazy">
+          <figcaption>Pixel Modern Life: city street at night</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/fantasy-village.png" alt="Pixel Fantasy Village: village map" loading="lazy">
+          <figcaption>Pixel Fantasy Village: village map</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/isometric.png" alt="Pixel Isometric: city street" loading="lazy">
+          <figcaption>Pixel Isometric: city street</figcaption>
+        </figure>
+        <figure>
+          <img src="scenes/dark-tournament.png" alt="Pixel Dark Tournament: fight screen" loading="lazy">
+          <figcaption>Pixel Dark Tournament: fight screen</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -159,9 +267,10 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p class="sub">Find more of my work on GitHub.</p>
+      <p class="sub">Find more of my work on GitHub and X.</p>
       <div class="links">
         <a class="btn alt" href="https://github.com/riclmbrclaro-commits" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn alt" href="https://x.com/Limaperazvd" target="_blank" rel="noopener">X (@Limaperazvd)</a>
       </div>
     </section>
 
